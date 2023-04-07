@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //Seccion de variables y parametros
-    private Rigidbody2D rb; 
+    private Rigidbody2D rb;
+    private Animator anim;
     private Vector2 direccion;
 
     [Header("Stadistics")]
@@ -33,11 +34,13 @@ public class PlayerController : MonoBehaviour
     public bool onFloor = true;
     public bool touchFloor;
     public bool onClimb;
+    public bool onAttack;
 
 
     private void Awake() //Obtencion del Rigibody
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
     void Start()
     {
@@ -53,6 +56,23 @@ public class PlayerController : MonoBehaviour
             dashCooldownT -= Time.deltaTime;
         }//Actualizar el cooldown del dash
     }
+
+
+    private void Attack(Vector2 direccion) //Ataque segun la direcciæon del golpe
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0)) //Tecla de ataque
+        {
+            if (!onAttack && !onDash) //Si esta en atque o en dash no se realiza
+            {
+                onAttack = true; //Hacemos el ataque
+
+                //
+                //
+            }
+        }
+    }
+
+
 
     private void Dash(float x, float y) //Dash
     {
@@ -109,8 +129,25 @@ public class PlayerController : MonoBehaviour
         {
             if (onFloor)
             {
-            Jump();
+                anim.SetBool("Jump", true); //Animacion Salto
+                Jump();
             }
+        }
+
+        float velocity; // Variable del blendtree
+        if (rb.velocity.y > 0)
+            velocity = 1;
+        else
+            velocity = -1;
+
+        if (!onFloor)  // Uso de blendtree
+        {
+            anim.SetFloat("VerticalVelocity", velocity); 
+        }
+        else
+        {   
+            if(velocity == -1)
+            FinishJump();
         }
         if (Input.GetKeyDown(KeyCode.Mouse1) && !runDash) //Con el clik dash si tiene alguna direccion en raw solo
         {
@@ -126,6 +163,10 @@ public class PlayerController : MonoBehaviour
             touchFloor = false;
     }
 
+    public void FinishJump() //Metodo del evento de la animacion de salto
+    {
+        anim.SetBool("Jump", false);
+    }
     private void ImproveJump()
     {
         if (rb.velocity.y < 0)
@@ -157,6 +198,15 @@ public class PlayerController : MonoBehaviour
             
             if(direccion != Vector2.zero) //Si la direccion es diferente de 0
             {
+                if (!onFloor)
+                {
+                    anim.SetBool("Jump", true); //Animacion caer
+                }
+                else
+                {
+                    anim.SetBool("Walk", true); //Animacion andar
+                }
+
                 if (direccion.x <0 && transform.localScale.x > 0) //Comprobar si izquierda
                 {
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -166,6 +216,10 @@ public class PlayerController : MonoBehaviour
                     transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
                 }
+            }
+            else
+            {
+                anim.SetBool("Walk", false); //Animacion Idle de vuelta
             }
         }
     }
