@@ -1,0 +1,1449 @@
+fileFormatVersion: 2
+guid: 603f05c341e655041bff34768e3d3b24
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 40}
+        - {x: -48, y: 56}
+        - {x: -32, y: 56}
+        - {x: -32, y: 40}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9170176d63c5bbc4da4de97b0ad33e1b
+      internalID: 184050578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bc3e530a061a24ca46dae3f88eb385
+      internalID: 433885029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b81f1d5135c614e8506a380cce1d3c
+      internalID: 187324119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07388c940164e194aa51343d7992e00e
+      internalID: -1903015787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f71fd2b9ba847a428253552ebd8b815
+      internalID: 589768122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2915631bb6d274c8f816d0b9e6481b
+      internalID: -1029798868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6b31305cf068a4484f4058c95b90c5
+      internalID: -1328920008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7d5ac644575064a90f3e9d85aa59f3
+      internalID: -239783680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef41392799f2f5488f25d98f15b9b56
+      internalID: 647102848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9d1802e3546b544842c45123e6683d
+      internalID: -2020346837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28cf156741c6a6341bcf0b5b2b3fe336
+      internalID: -1459562007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329ee81ba2a82b744a546f145b4490fe
+      internalID: -1119541252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ecbe7865b9f464798e1c64d4db2776
+      internalID: 1560033412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e17616940d5e74786888449005d790
+      internalID: -916368315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105b88d39fef49f46879a46075e6e1a2
+      internalID: 2081137069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80958f6dd5944a145852a44c05a6f9a2
+      internalID: -1136603020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d875accd3384fb440b9dcfd6988e22e4
+      internalID: -520592013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a82ae30a5aed1d4cb77724dcab9f139
+      internalID: -1999246351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e59f9d6e1353114888e652e01519ef4
+      internalID: 315083385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c77c2902088ab4dbb0e50323a84d7d
+      internalID: -1982982246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044fcda5cd43755458d17ec90edadfa7
+      internalID: -1952817611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cae0caaaa6dbfe408f286bc2fa052c4
+      internalID: -1738870112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41480a817368b4141bdf557f8c0595f3
+      internalID: 841018022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2f87513e3ae6d4781fbb675c0f1486
+      internalID: 302810117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c9c57d774ee0341abee341db083780
+      internalID: -1588434387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5719cb5bad9b54caabaee7dff0cdd5
+      internalID: -1503357880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a631335c98a61484ab9c241536fb327b
+      internalID: 1381471538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60422679570a7449838d2adea7c47be
+      internalID: 853311078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b214f4ed0bbf42043b84194c77a79812
+      internalID: 905469527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c29eac93f76e5d4599b120cbf61144b
+      internalID: 71963046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469e7f493154d534cb68819c8baeee5f
+      internalID: 1996411395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165da65a450bad249aa67c6637cb63c1
+      internalID: 1403809071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e50df0950d58149a0a7ca6680df425
+      internalID: 1279127308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07db7e7b36e70947b5371950bbf0bd9
+      internalID: 1033716332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27168a94b79edc54fa130994ad7dec58
+      internalID: -168904848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c036a205c535641a6de8a2abe15ad9
+      internalID: -212286915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f6db1f73f4dda42a5e723af41eb0cc
+      internalID: 1002725331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6796f5665385d584cadbd5628aa0dba7
+      internalID: 1038352175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d836bb7c16bc9e4e95382350b7e2a97
+      internalID: 1052222352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7052a7cd2d4a64d80234d3f7bd7d75
+      internalID: 2052659425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61533a91ed43824eb50ba59210e33eb
+      internalID: 1126297068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f45e2fecd6e1f4d8380b9c0528a543
+      internalID: -63034502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f51fc7b89989646b088567be603ff2
+      internalID: 681231133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982d654d8697fc549b65cec0cb3198b1
+      internalID: -1391127556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be835d4ceb4bb3348b62a7212d05ffec
+      internalID: 413038899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184aec772c86d9046bbe78d6e8de3be3
+      internalID: 1749115711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038ce05be4f7d15409600058dc21403e
+      internalID: -1509961741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486bb8b8bdbf75c4baf28f0615fed1cf
+      internalID: 832933817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d04f5d222eb7545beaa7385f415416
+      internalID: 162312352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a387a8050698f4ba1ea131b72b0ba4
+      internalID: 1262740879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites tiles-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dccf00c7552dad4d989ccbd27bcbae2
+      internalID: -100285357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -48, y: 40}
+      - {x: -48, y: 56}
+      - {x: -32, y: 56}
+      - {x: -32, y: 40}
+    - - {x: -32, y: 40}
+      - {x: -32, y: 56}
+      - {x: -16, y: 56}
+      - {x: -16, y: 40}
+    - - {x: -16, y: 40}
+      - {x: -16, y: 56}
+      - {x: 0, y: 56}
+      - {x: 0, y: 40}
+    - - {x: 0, y: 40}
+      - {x: 0, y: 56}
+      - {x: 16, y: 56}
+      - {x: 16, y: 40}
+    - - {x: 16, y: 40}
+      - {x: 16, y: 56}
+      - {x: 32, y: 56}
+      - {x: 32, y: 40}
+    - - {x: 32, y: 40}
+      - {x: 32, y: 56}
+      - {x: 48, y: 56}
+      - {x: 48, y: 40}
+    - - {x: 48, y: 40}
+      - {x: 48, y: 56}
+      - {x: 64, y: 56}
+      - {x: 64, y: 40}
+    - - {x: -64, y: 24}
+      - {x: -64, y: 40}
+      - {x: -48, y: 40}
+      - {x: -48, y: 24}
+    - - {x: -48, y: 24}
+      - {x: -48, y: 40}
+      - {x: -32, y: 40}
+      - {x: -32, y: 24}
+    - - {x: -32, y: 24}
+      - {x: -32, y: 40}
+      - {x: -16, y: 40}
+      - {x: -16, y: 24}
+    - - {x: -16, y: 24}
+      - {x: -16, y: 40}
+      - {x: 0, y: 40}
+      - {x: 0, y: 24}
+    - - {x: 0, y: 24}
+      - {x: 0, y: 40}
+      - {x: 16, y: 40}
+      - {x: 16, y: 24}
+    - - {x: 16, y: 24}
+      - {x: 16, y: 40}
+      - {x: 32, y: 40}
+      - {x: 32, y: 24}
+    - - {x: 32, y: 24}
+      - {x: 32, y: 40}
+      - {x: 48, y: 40}
+      - {x: 48, y: 24}
+    - - {x: 48, y: 24}
+      - {x: 48, y: 40}
+      - {x: 64, y: 40}
+      - {x: 64, y: 24}
+    - - {x: -64, y: 8}
+      - {x: -64, y: 24}
+      - {x: -48, y: 24}
+      - {x: -48, y: 8}
+    - - {x: -48, y: 8}
+      - {x: -48, y: 24}
+      - {x: -32, y: 24}
+      - {x: -32, y: 8}
+    - - {x: -32, y: 8}
+      - {x: -32, y: 24}
+      - {x: -16, y: 24}
+      - {x: -16, y: 8}
+    - - {x: -16, y: 8}
+      - {x: -16, y: 24}
+      - {x: 0, y: 24}
+      - {x: 0, y: 8}
+    - - {x: 0, y: 8}
+      - {x: 0, y: 24}
+      - {x: 16, y: 24}
+      - {x: 16, y: 8}
+    - - {x: 16, y: 8}
+      - {x: 16, y: 24}
+      - {x: 32, y: 24}
+      - {x: 32, y: 8}
+    - - {x: 32, y: 8}
+      - {x: 32, y: 24}
+      - {x: 48, y: 24}
+      - {x: 48, y: 8}
+    - - {x: 48, y: 8}
+      - {x: 48, y: 24}
+      - {x: 64, y: 24}
+      - {x: 64, y: 8}
+    - - {x: -64, y: -8}
+      - {x: -64, y: 8}
+      - {x: -48, y: 8}
+      - {x: -48, y: -8}
+    - - {x: -48, y: -8}
+      - {x: -48, y: 8}
+      - {x: -32, y: 8}
+      - {x: -32, y: -8}
+    - - {x: -32, y: -8}
+      - {x: -32, y: 8}
+      - {x: -16, y: 8}
+      - {x: -16, y: -8}
+    - - {x: -16, y: -8}
+      - {x: -16, y: 8}
+      - {x: 0, y: 8}
+      - {x: 0, y: -8}
+    - - {x: 0, y: -8}
+      - {x: 0, y: 8}
+      - {x: 16, y: 8}
+      - {x: 16, y: -8}
+    - - {x: 16, y: -8}
+      - {x: 16, y: 8}
+      - {x: 32, y: 8}
+      - {x: 32, y: -8}
+    - - {x: 32, y: -8}
+      - {x: 32, y: 8}
+      - {x: 48, y: 8}
+      - {x: 48, y: -8}
+    - - {x: 48, y: -8}
+      - {x: 48, y: 8}
+      - {x: 64, y: 8}
+      - {x: 64, y: -8}
+    - - {x: -64, y: -24}
+      - {x: -64, y: -8}
+      - {x: -48, y: -8}
+      - {x: -48, y: -24}
+    - - {x: -48, y: -24}
+      - {x: -48, y: -8}
+      - {x: -32, y: -8}
+      - {x: -32, y: -24}
+    - - {x: -32, y: -24}
+      - {x: -32, y: -8}
+      - {x: -16, y: -8}
+      - {x: -16, y: -24}
+    - - {x: -16, y: -24}
+      - {x: -16, y: -8}
+      - {x: 0, y: -8}
+      - {x: 0, y: -24}
+    - - {x: 0, y: -24}
+      - {x: 0, y: -8}
+      - {x: 16, y: -8}
+      - {x: 16, y: -24}
+    - - {x: 16, y: -24}
+      - {x: 16, y: -8}
+      - {x: 32, y: -8}
+      - {x: 32, y: -24}
+    - - {x: 32, y: -24}
+      - {x: 32, y: -8}
+      - {x: 48, y: -8}
+      - {x: 48, y: -24}
+    - - {x: 48, y: -24}
+      - {x: 48, y: -8}
+      - {x: 64, y: -8}
+      - {x: 64, y: -24}
+    - - {x: -64, y: -40}
+      - {x: -64, y: -24}
+      - {x: -48, y: -24}
+      - {x: -48, y: -40}
+    - - {x: -48, y: -40}
+      - {x: -48, y: -24}
+      - {x: -32, y: -24}
+      - {x: -32, y: -40}
+    - - {x: -32, y: -40}
+      - {x: -32, y: -24}
+      - {x: -16, y: -24}
+      - {x: -16, y: -40}
+    - - {x: -16, y: -40}
+      - {x: -16, y: -24}
+      - {x: 0, y: -24}
+      - {x: 0, y: -40}
+    - - {x: 0, y: -40}
+      - {x: 0, y: -24}
+      - {x: 16, y: -24}
+      - {x: 16, y: -40}
+    - - {x: 16, y: -40}
+      - {x: 16, y: -24}
+      - {x: 32, y: -24}
+      - {x: 32, y: -40}
+    - - {x: 32, y: -40}
+      - {x: 32, y: -24}
+      - {x: 48, y: -24}
+      - {x: 48, y: -40}
+    - - {x: 48, y: -40}
+      - {x: 48, y: -24}
+      - {x: 64, y: -24}
+      - {x: 64, y: -40}
+    - - {x: -64, y: -56}
+      - {x: -64, y: -40}
+      - {x: -48, y: -40}
+      - {x: -48, y: -56}
+    - - {x: -48, y: -56}
+      - {x: -48, y: -40}
+      - {x: -32, y: -40}
+      - {x: -32, y: -56}
+    - - {x: -32, y: -56}
+      - {x: -32, y: -40}
+      - {x: -16, y: -40}
+      - {x: -16, y: -56}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sprites tiles-Sheet_41: -63034502
+      Sprites tiles-Sheet_15: -1136603020
+      Sprites tiles-Sheet_16: -520592013
+      Sprites tiles-Sheet_25: -1503357880
+      Sprites tiles-Sheet_29: 71963046
+      Sprites tiles-Sheet_14: 2081137069
+      Sprites tiles-Sheet_36: 1002725331
+      Sprites tiles-Sheet_42: 681231133
+      Sprites tiles-Sheet_13: -916368315
+      Sprites tiles-Sheet_43: -1391127556
+      Sprites tiles-Sheet_46: -1509961741
+      Sprites tiles-Sheet_47: 832933817
+      Sprites tiles-Sheet_32: 1279127308
+      Sprites tiles-Sheet_50: -100285357
+      Sprites tiles-Sheet_11: -1119541252
+      Sprites tiles-Sheet_10: -1459562007
+      Sprites tiles-Sheet_12: 1560033412
+      Sprites tiles-Sheet_27: 853311078
+      Sprites tiles-Sheet_34: -168904848
+      Sprites tiles-Sheet_19: -1982982246
+      Sprites tiles-Sheet_1: 481972708
+      Sprites tiles-Sheet_49: 1262740879
+      Sprites tiles-Sheet_24: -1588434387
+      Sprites tiles-Sheet_4: 589768122
+      Sprites tiles-Sheet_38: 1052222352
+      Sprites tiles-Sheet_2: 2049614946
+      Sprites tiles-Sheet_44: 413038899
+      Sprites tiles-Sheet_3: 433885029
+      Sprites tiles-Sheet_48: 162312352
+      Sprites tiles-Sheet_20: -1952817611
+      Sprites tiles-Sheet_28: 905469527
+      Sprites tiles-Sheet_26: 1381471538
+      Sprites tiles-Sheet_21: -1738870112
+      Sprites tiles-Sheet_23: 302810117
+      Sprites tiles-Sheet_45: 1749115711
+      Sprites tiles-Sheet_22: 841018022
+      Sprites tiles-Sheet_5: -1029798868
+      Sprites tiles-Sheet_8: 647102848
+      Sprites tiles-Sheet_0: 184050578
+      Sprites tiles-Sheet_33: 1033716332
+      Sprites tiles-Sheet_30: 1996411395
+      Sprites tiles-Sheet_35: -212286915
+      Sprites tiles-Sheet_37: 1038352175
+      Sprites tiles-Sheet_7: -239783680
+      Sprites tiles-Sheet_31: 1403809071
+      Sprites tiles-Sheet_40: 1126297068
+      Sprites tiles-Sheet_39: 2052659425
+      Sprites tiles-Sheet_9: -2020346837
+      Sprites tiles-Sheet_17: -1999246351
+      Sprites tiles-Sheet_18: 315083385
+      Sprites tiles-Sheet_6: -1328920008
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
