@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\Enemys\RangedEnemy.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\Enemys\Arrow.cs" />
-    <Compile Include="Assets\scr.cs" />
     <Compile Include="Assets\Scripts\GreyCamera.cs" />
     <Compile Include="Assets\Scripts\Fall.cs" />
     <Compile Include="Assets\Scripts\Items.cs" />
