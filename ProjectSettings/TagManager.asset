@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Enemy
   - VirtualCamera
+  - ObjetoRecogible
+  - Destructible
+  - Platform
+  - Coin
+  - Heart
+  - PowerUp
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
@@ -13,8 +20,8 @@ TagManager:
   - Floor
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Destructible
   - 
   - 
   - 

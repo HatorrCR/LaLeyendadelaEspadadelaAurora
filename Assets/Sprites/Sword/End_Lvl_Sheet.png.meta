@@ -1,0 +1,865 @@
+fileFormatVersion: 2
+guid: b029f1f3d31a2dc4b98ffe0a1a7fb1e9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f880a6430966564195592e378a976b8
+      internalID: 1464290607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7f301d04f2f8f4db01c9459f0793ed
+      internalID: -1330103401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3170e0140ba076419896fb5ad439427
+      internalID: -153195521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60694e96ae56c124baa943705ad7506a
+      internalID: -20342570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7d9603a0f6a5640bc41c7d22e3a53b
+      internalID: -277061449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b755acb67a724a24c95eb48a2930d1c5
+      internalID: 524068294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61936f7ea594004bb9ba6451b99a78f
+      internalID: -1800001738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75a39e199079cf41884fd0ad57e65e9
+      internalID: -151773301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2cb70364f363040a3bf30eef417659
+      internalID: 1424172186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77afb3dda183da418a1340b45563aea
+      internalID: -564862344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e781ceb6a7a5e41917d75f33f9a3b9
+      internalID: 859651711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2246ab8f99eb6a744b92528fd6228908
+      internalID: -1323180159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f5ae0d9e629f34fa9ef7ec7ee233ac
+      internalID: 515473185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55e144cb4da1e745825cf79f7068ecb
+      internalID: 1959333380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27317fe047833664383f58d67656eaae
+      internalID: -1980908996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ac7e3bd07ba224080ed714e3debef0
+      internalID: 817084985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8aaa3c4bb624b41bba23cb44299c65
+      internalID: 994604145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a433dd2e0e31f4aa84f9445e0d756b
+      internalID: -1312507326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c656b65ef79ac22469e62c7a27134a8b
+      internalID: 1659851488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 0
+        width: 110
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8981a27a3a40b41819f19c58b87953
+      internalID: -815288520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 109
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd044ec5bcaf76d43ac1f6d06e229a97
+      internalID: -1941995439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 0
+        width: 107
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b156ee0c756fe4fbc29fa2b896abe7
+      internalID: 859695209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 2848
+        y: 0
+        width: 106
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718a027a80c26e04c82ba0dc68e4a473
+      internalID: -214705484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 0
+        width: 104
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad4d24d6c6a93a4e94b08b08f873505
+      internalID: -144639733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 3104
+        y: 0
+        width: 103
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2021768bf050eba4d8442ff3aa79074a
+      internalID: -516722490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 3232
+        y: 0
+        width: 101
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f91fe5cc3ee1d4eac27f20b7858cc7
+      internalID: 546285003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 0
+        width: 100
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81d41b83f4efd14da77730b4474d934
+      internalID: -534523735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 0
+        width: 98
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e03b5a0e62ad94ea8a02df0b7042bc
+      internalID: 1731261139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 3616
+        y: 0
+        width: 97
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb8e4befc0bd584c8c36e0ab3cc8bd1
+      internalID: -1442230149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 0
+        width: 96
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75233b6f828c1634d8fbbb58cec0e1b8
+      internalID: 1128243982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 3866
+        y: 0
+        width: 102
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dce2046e3a7d4a4a9a0a47ce080095d
+      internalID: 1953287304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 3980
+        y: 0
+        width: 116
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc71f0982c60bb47a2aaa87bb7587c3
+      internalID: -1644644968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Lvl_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 4097
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115afb94a756c504f90a90e2717c55c4
+      internalID: -1850991485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      End_Lvl_Sheet_11: -1215564304
+      End_Lvl_Sheet_30: 859695209
+      End_Lvl_Sheet_26: -1312507326
+      End_Lvl_Sheet_33: -516722490
+      End_Lvl_Sheet_16: -564862344
+      End_Lvl_Sheet_39: 1953287304
+      End_Lvl_Sheet_2: -153195521
+      End_Lvl_Sheet_25: 994604145
+      End_Lvl_Sheet_20: -1323180159
+      End_Lvl_Sheet_44: -1260216857
+      End_Lvl_Sheet_48: -2070748603
+      End_Lvl_Sheet_14: 1424172186
+      End_Lvl_Sheet_42: 679315563
+      End_Lvl_Sheet_0: 1464290607
+      End_Lvl_Sheet_35: -534523735
+      End_Lvl_Sheet_1: -1330103401
+      End_Lvl_Sheet_36: 1731261139
+      End_Lvl_Sheet_12: -151773301
+      End_Lvl_Sheet_24: 817084985
+      End_Lvl_Sheet_10: -1800001738
+      End_Lvl_Sheet_38: 1128243982
+      End_Lvl_Sheet_15: -441678602
+      End_Lvl_Sheet_7: -501252987
+      End_Lvl_Sheet_28: -815288520
+      End_Lvl_Sheet_9: 76327158
+      End_Lvl_Sheet_27: 1659851488
+      End_Lvl_Sheet_21: 515473185
+      End_Lvl_Sheet_37: -1442230149
+      End_Lvl_Sheet_19: 651918503
+      End_Lvl_Sheet_8: 524068294
+      End_Lvl_Sheet_45: -1181075035
+      End_Lvl_Sheet_5: 1783938717
+      End_Lvl_Sheet_34: 546285003
+      End_Lvl_Sheet_13: -1206641023
+      End_Lvl_Sheet_3: -1248765039
+      End_Lvl_Sheet_29: -1941995439
+      End_Lvl_Sheet_43: -384171829
+      End_Lvl_Sheet_18: 859651711
+      End_Lvl_Sheet_31: -214705484
+      End_Lvl_Sheet_4: -20342570
+      End_Lvl_Sheet_40: -1644644968
+      End_Lvl_Sheet_22: 1959333380
+      End_Lvl_Sheet_47: 562098162
+      End_Lvl_Sheet_23: -1980908996
+      End_Lvl_Sheet_32: -144639733
+      End_Lvl_Sheet_41: -1850991485
+      End_Lvl_Sheet_46: 1153594173
+      End_Lvl_Sheet_6: -277061449
+      End_Lvl_Sheet_17: 278607172
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

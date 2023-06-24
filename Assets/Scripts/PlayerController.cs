@@ -3,34 +3,49 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using Cinemachine;
+using Unity.Mathematics;
+using UnityEngine.Video;
 
 public class PlayerController : MonoBehaviour
 {
     //Seccion de variables y parametros
+    private GameObject lastEnemy;
+    private int direccionX;
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 direccion;
     private Vector2 respawnPoint;
     private CinemachineVirtualCamera cm;
+    private Vector2 movementdirection;
+    private Vector2 damagedirection;
+    private bool block;
+    private GreyCamera gc;
+    private SpriteRenderer sprite;
+    public AudioClip deathSound;
+    public AudioClip auchSound;
 
     [Header("Stadistics")]
-    public float movementSpeed = 11;
-    public float strongjump = 15;
+    public float movementSpeed = 5;
+    public float runSpeed = 6;
+    public float strongjump = 12;
     public float gravityScale = 3;
+    public float slideVel;
+    public int lives = 3;
+    public float InmortalTime;
+    public float recoil;
 
     [Header("Dash")]
-    public float dashVelocity = 16;
-    public float dashDuration = 0.2f;
-    private float dashCooldown = 0.3f;
-    private float dashCooldownT = 0.0f;
+    public float dashVelocity = 15;
     public bool canDash;
     public bool onDash = false;
-    public bool runDash;
 
     [Header("Colisions")]
     public Vector2 abajo;
+    public Vector2 derecha;
+    public Vector2 izquierda;
     public float rColision;
     public LayerMask layerFloor;
+
 
     [Header("Booleans")]
     public bool canMove = true;
@@ -39,7 +54,15 @@ public class PlayerController : MonoBehaviour
     public bool onClimb;
     public bool onAttack;
     public bool onShake;
-
+    public bool objetoRecogido = false;
+    public bool onWall;
+    public bool rightWall;
+    public bool leftWall;
+    public bool hangOn;
+    public bool wallJump;
+    public bool Inmortal;
+    public bool applystrong;
+    public bool endMap;
 
     private void Awake() //Obtencion del Rigibody
     {
@@ -47,7 +70,128 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         respawnPoint = transform.position; //Seteamos el respawn
         cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        gc = Camera.main.GetComponent<GreyCamera>();
+        sprite = GetComponent<SpriteRenderer>();
     }
+
+    public void EndMovement(int direccionX)
+    {
+        endMap = true;
+        this.direccionX = direccionX;
+        anim.SetBool("Walk", true);
+        if (this.direccionX < 0 && transform.localScale.x > 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+        else if (this.direccionX > 0 && transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+
+
+    public void SetBlockTrue()
+    {
+        block = true;
+    }
+
+    public void Death()
+    {
+        if (lives > 0)
+            return;
+        GameManager.instance.GameOver();
+        AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        this.enabled = false;
+    }
+
+    public void GetDamage()
+    {
+        StartCoroutine(GetImpact(Vector2.zero));
+    }
+
+    public void GetDamage(Vector2 damagedirection)
+    {
+        StartCoroutine(GetImpact(damagedirection));
+    }
+
+    private IEnumerator GetImpact(Vector2 damagedirection)
+    {
+        if (!Inmortal)
+        {
+            AudioSource.PlayClipAtPoint(auchSound, transform.position);
+            StartCoroutine(Inmortality());
+            lives--;
+            gc.enabled = true;
+            float velAux = movementSpeed;
+            this.damagedirection = damagedirection;
+            applystrong = true;
+            Time.timeScale = 0.4f;
+            FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
+            StartCoroutine(ShakeCamera());
+            yield return new WaitForSeconds(0.2f);
+            Time.timeScale = 1;
+            gc.enabled = false;
+
+            ActuLivesUI(1);
+            movementSpeed = velAux;
+            yield return new WaitForSeconds(1);
+            Death();
+       
+        }
+    }
+
+    public void ActuLivesUI(int livesMinus)
+    {
+        int livesRest = livesMinus;
+        for (int i = GameManager.instance.vidasUI.transform.childCount - 1; i >= 0; i--)
+        {
+            {
+                if (GameManager.instance.vidasUI.transform.GetChild(i).gameObject.activeInHierarchy && livesRest != 0)
+                {
+                    GameManager.instance.vidasUI.transform.GetChild(i).gameObject.SetActive(false);
+                    livesRest--;
+                }
+                else
+                {
+                    if (livesRest == 0)
+                    break;
+                }
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (applystrong)
+        {
+            rb.velocity = Vector2.zero;
+            rb.AddForce(-damagedirection * recoil, ForceMode2D.Impulse);
+            applystrong = false;
+        }
+    }
+    
+    public void GetInmortality()
+    {
+        StartCoroutine(Inmortality());
+    }
+
+    private IEnumerator Inmortality()
+    {
+        Inmortal = true;
+        float timelapse = 0;
+        while (timelapse < InmortalTime)
+        {
+            sprite.color = new Color(1, 1, 1, 0.5f);
+            yield return new WaitForSeconds(InmortalTime / 20);
+            sprite.color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(InmortalTime / 20);
+            timelapse += InmortalTime / 10;
+        }
+        Inmortal = false;
+    }
+
+
     void Start()
     {
 
@@ -55,14 +199,35 @@ public class PlayerController : MonoBehaviour
 
     void Update() //Cambios por actualizacion
     {
+        if (!endMap)
+        {
         Movement();
         Grip();
-
-        if (dashCooldownT > 0.0f)
+        }
+        else
         {
-            dashCooldownT -= Time.deltaTime;
-        }//Actualizar el cooldown del dash
+            rb.velocity = (new Vector2(direccionX * movementSpeed, rb.velocity.y));
+        }
+
+        if (Inmortal && lastEnemy != null)
+        {
+            Physics2D.IgnoreCollision(lastEnemy.GetComponent<Collider2D>(), GetComponent<Collider2D>(), false);
+            lastEnemy = null;
+        }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (Inmortal)
+            {
+                lastEnemy = collision.gameObject;
+                Physics2D.IgnoreCollision(lastEnemy.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
+            }
+        }
+    }
+
     private IEnumerator ShakeCamera() //Rutina para el movimiento de camara
     {
         onShake = true;
@@ -93,75 +258,153 @@ public class PlayerController : MonoBehaviour
 
     private void Attack(Vector2 direccion) //Ataque segun la direcciæon del golpe
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) //Tecla de ataque
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (!onAttack && !onDash) //Si esta en atque o en dash no se realiza
+            if (!onAttack && !onDash)
             {
-                onAttack = true; //Hacemos el ataque
-
-                //
-                //
+                onAttack = true;
+                anim.SetFloat("AttackX", direccion.x);
+                anim.SetFloat("AttackY", direccion.y);
+                anim.SetBool("Attack", true);
             }
         }
     }
 
+    public void FinishAttack()
+    {
+        anim.SetBool("Attack", false);
+        block = false;
+        onAttack = false;
+    }
+
+    private Vector2 attackdirection (Vector2 movementdirection, Vector2 direction)
+    {
+        if (rb.velocity.x == 0 && direction.y != 0)
+            return new Vector2(0, direction.y);
+        return new Vector2(movementdirection.x, direction.y);
+    }
+
     private void Dash(float x, float y) //Dash
     {
-        if (!onDash && dashCooldownT <= 0.0f) //Si no esta en dash
-        {
-            onDash = true;
-            canDash = true; //Si es posible
-            rb.velocity = Vector2.zero; //Lo iniciamos en 0
-            rb.velocity += new Vector2(x, y).normalized * dashVelocity; //Normalizamos a 1 y multiplicamos el dash
-            StartCoroutine(PrepDash()); //Llamamos corrutina
-        }
+        anim.SetBool("Dash", true);
+        Vector3 playerpos = Camera.main.WorldToViewportPoint(transform.position);
+        Camera.main.GetComponent<RippleEffect>().Emit(playerpos); ;
+        canDash = true;
+        rb.velocity = Vector2.zero; 
+        rb.velocity += new Vector2(x, y).normalized * dashVelocity;
+        StartCoroutine(PrepDash());
+        
     }
 
-    private IEnumerator PrepDash() //Corrutina
+    private IEnumerator PrepDash()
     {
         StartCoroutine(FloorDash());
-        rb.gravityScale = gravityScale; //Gravedad en 0 para que no afecte
-        runDash = true; //Hace el dash
-
-        yield return new WaitForSeconds(dashDuration); //Tiempo de espera tras el dash
-        rb.gravityScale = gravityScale; //Gravedad tras acabas el dash
-        runDash = false; //Acaba el dash
+        rb.gravityScale = 0;
+        onDash = true;
+        yield return new WaitForSeconds(0.3f);
+        rb.gravityScale = 3;
         onDash = false;
-        dashCooldownT = dashCooldown;
+        FinishDash();
     }
 
-    private IEnumerator FloorDash() //Corrutina
+    private IEnumerator FloorDash() 
     {
-        yield return new WaitForSeconds(dashDuration); //Tiempo de espera
-        if(onFloor) //Si en el suelo 
+        yield return new WaitForSeconds(0.15f);
+        if(onFloor)
             canDash = false;
+    }
+
+    public void FinishDash()
+    {
+        anim.SetBool("Dash", false);
     }
 
     private void TouchFloor() //Si esta tocando el suelo
     {
         canDash = false;
-        runDash = false;
+        onDash = false;
+        anim.SetBool("Jump", false);
     }
 
     private void Movement() //Obtencion Movimientos
     {
-        float x = Input.GetAxis("Horizontal"); //Cambio en x
-        float y = Input.GetAxis("Vertical"); //Cambio en y
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
 
-        float xRaw = Input.GetAxisRaw("Horizontal"); //Cambio en x absoluto
-        float yRaw = Input.GetAxisRaw("Vertical"); //Cambio en y absoluto
+        float xRaw = Input.GetAxisRaw("Horizontal");
+        float yRaw = Input.GetAxisRaw("Vertical");
 
-        direccion = new Vector2(x, y); //Direccion en 2d con vector2
+        direccion = new Vector2(x, y);
+        Vector2 directionRaw = new Vector2(xRaw, yRaw);
         Walk(direccion);
+        Attack(attackdirection(movementdirection,directionRaw));
 
+        if(onFloor && !onDash)
+        {
+            wallJump = false;
+        }
+
+        hangOn = onWall && Input.GetKey(KeyCode.LeftShift);
+
+        if (hangOn && !onFloor)
+        {
+            anim.SetBool("Climb", true);
+            if (rb.velocity == Vector2.zero)
+            {
+                anim.SetFloat("Velocity", 0);
+            }
+            else
+            {
+                anim.SetFloat("Velocity", 1);
+            }
+        }
+        else
+        {
+            anim.SetBool("Climb", false);
+            anim.SetFloat("Velocity", 0);
+        }
+
+        if(hangOn && !onDash)
+        {
+            rb.gravityScale = 0;
+            if(x > 0.2f || x < 0.2f)
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+            float velocityMod = y > 0 ? 0.5f : 1;
+            rb.velocity = new Vector2(rb.velocity.x, y * (movementSpeed * velocityMod));
+            if(leftWall && transform.localScale.x > 0)
+            {
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            }
+            else if (rightWall && transform.localScale.x < 0)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+        }
+        else
+        {
+            rb.gravityScale = 3;
+        }
+
+        if (onWall && !onFloor)
+        {
+            anim.SetBool("Climb", true);
+            if (x != 0 && !hangOn)
+                SlideWall();
+        }
 
         ImproveJump();
-        if (Input.GetKeyDown(KeyCode.Space)) //Con el espacio se salta
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (onFloor)
             {
-                anim.SetBool("Jump", true); //Animacion Salto
+                anim.SetBool("Jump", true);
                 Jump();
+            }
+            if(onWall && !onFloor)
+            {
+                anim.SetBool("Climb", false);
+                anim.SetBool("Jump", true);
+                WallJump();
             }
         }
 
@@ -180,18 +423,51 @@ public class PlayerController : MonoBehaviour
             if(velocity == -1)
             FinishJump();
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1) && !runDash) //Con el clik dash si tiene alguna direccion en raw solo
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !onDash && !canDash)
         {
             if (xRaw != 0 || yRaw != 0)
-                Dash(xRaw, 0);
+                Dash(xRaw, yRaw);
         }
-        if(onFloor && !touchFloor)  //Comprobar el contacto con el suelo
+        if(onFloor && !touchFloor)
         {
+            anim.SetBool("Climb", false);
             TouchFloor();
             touchFloor = true;
         }
-        if (!onFloor && touchFloor) //Comprobar que no este en suelo
+        if (!onFloor && touchFloor)
             touchFloor = false;
+    }
+
+    private void SlideWall()
+    {
+        if(canMove)
+            rb.velocity = new Vector2(rb.velocity.x, -slideVel);
+    }
+
+    private void WallJump()
+    {
+        StopCoroutine(DeshabMov(0));
+        StartCoroutine(DeshabMov(0.1f));
+        Vector2 wallDirection = rightWall ? Vector2.left : Vector2.right;
+        if (wallDirection.x < 0 && transform.localScale.x > 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+        else if (wallDirection.x > 0 && transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        anim.SetBool("Jump", true);
+        anim.SetBool("Climb", false);
+        Jump((Vector2.up + wallDirection), true);
+        wallJump = true;
+    }
+
+    private IEnumerator DeshabMov(float time)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(time);
+        canMove = true; 
     }
 
     public void FinishJump() //Metodo del evento de la animacion de salto
@@ -203,56 +479,106 @@ public class PlayerController : MonoBehaviour
     {
         if (rb.velocity.y < 0)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (2.5f - 1) * Time.deltaTime; //Velocidad de bajada
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (2.5f - 1) * Time.deltaTime; 
         }
         else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
         {
-            rb.velocity += Vector2.up * Physics.gravity.y * (3.0f - 1) * Time.deltaTime; //Subida
+            rb.velocity += Vector2.up * Physics.gravity.y * (3.0f - 1) * Time.deltaTime;
         }
     } //Propiedades del salto
 
-    private void Grip() //Si esta en suelo
+    private void Grip() //Trepar
     {
-        onFloor = Physics2D.OverlapCircle((Vector2)transform.position + abajo, rColision, layerFloor ); //Radio de colision que detecta el suelo
+        onFloor = Physics2D.OverlapCircle((Vector2)transform.position + abajo, rColision, layerFloor);
+        Collider2D collisionR = Physics2D.OverlapCircle((Vector2)transform.position + derecha, rColision, layerFloor);
+        Collider2D collisionL = Physics2D.OverlapCircle((Vector2)transform.position + izquierda, rColision, layerFloor);
+        if(collisionR != null)
+        {
+            onWall = !collisionR.CompareTag("Platform");
+        }
+        else if(collisionL != null)
+        {
+            onWall = !collisionL.CompareTag("Platform");
+        }
+        else
+        {
+            onWall= false;
+        }
+
+        rightWall = Physics2D.OverlapCircle((Vector2)transform.position + derecha, rColision, layerFloor);
+        leftWall = Physics2D.OverlapCircle((Vector2)transform.position + izquierda, rColision, layerFloor);
     }
 
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += Vector2.up * strongjump;
-    } //Calculos del salto
+    }
+    private void Jump(Vector2 wallDirection, bool wall)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.velocity += wallDirection * strongjump;
+    }
 
     private void Walk(Vector2 direccion) //Caminar obtiene movimiento
     {
-        if (canMove && !runDash)
+        if (canMove && !onDash && !onAttack)
         {
-            rb.velocity = new Vector2(direccion.x * movementSpeed, rb.velocity.y); //Solo en eje x para andar
-            
-            if(direccion != Vector2.zero) //Si la direccion es diferente de 0
+            if(wallJump)
             {
-                if (!onFloor)
-                {
-                    anim.SetBool("Jump", true); //Animacion caer
-                }
-                else
-                {
-                    anim.SetBool("Walk", true); //Animacion andar
-                }
-
-                if (direccion.x <0 && transform.localScale.x > 0) //Comprobar si izquierda
-                {
-                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                }
-                else if(direccion.x > 0 && transform.localScale.x < 0) //Comprobar si derecha
-                {
-                    transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-
-                }
+                rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(direccion.x * movementSpeed, rb.velocity.y)), Time.deltaTime / 2);
             }
             else
             {
-                anim.SetBool("Walk", false); //Animacion Idle de vuelta
+                if (direccion != Vector2.zero && !hangOn)
+                {
+                    if (!onFloor)
+                    {
+                        anim.SetBool("Jump", true);
+                    }
+                    else
+                    {
+                        anim.SetBool("Walk", true);
+                    }
+
+                    rb.velocity = (new Vector2(direccion.x * movementSpeed, rb.velocity.y));
+                    if (direccion.x < 0 && transform.localScale.x > 0)
+                    {
+                        movementdirection = attackdirection(Vector2.left, direccion);
+                        ; transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                    }
+                    else if (direccion.x > 0 && transform.localScale.x < 0)
+                    {
+                        movementdirection = attackdirection(Vector2.right, direccion);
+                        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                    }
+                }
+                else
+                {
+                    if (direccion.y > 0 && direccion.x == 0)
+                    {
+                        movementdirection = attackdirection(direccion, Vector2.up);
+                    }
+                    anim.SetBool("Walk", false); 
+                }
+            }
+
+        }
+        else
+        {
+            if (block)
+            {
+                FinishAttack();
             }
         }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("ObjetoRecogible"))
+        {
+            objetoRecogido = true;
+        }
+
     }
 }
