@@ -9,17 +9,24 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+<<<<<<< HEAD
     private bool runing;
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     public static GameManager instance;
     public GameObject vidasUI;
     public PlayerController player;
     public TextMeshProUGUI textcoin;
     public int coin;
+<<<<<<< HEAD
     public TMP_Text saveText;
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 
     public GameObject panelPause;
     public GameObject panelGameOver;
     public GameObject panelLoading;
+<<<<<<< HEAD
     public GameObject panelFinalGame;
 
     public bool nextLevel;
@@ -27,6 +34,9 @@ public class GameManager : MonoBehaviour
     public List<Transform> positionsN = new List<Transform>();
     public List<Transform> positionsB = new List<Transform>();
     public GameObject transitionPanel;
+=======
+
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 
     private void Awake()
     {
@@ -35,6 +45,7 @@ public class GameManager : MonoBehaviour
 
         else
             Destroy(this.gameObject);
+<<<<<<< HEAD
         if(PlayerPrefs.GetInt("lives") != 0) 
             ChargeData();
     }
@@ -113,6 +124,8 @@ public class GameManager : MonoBehaviour
         */
         int livesRest = 5 - player.lives;
         player.ActuLivesUI(livesRest);
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     }
 
     public void ActualCoin()
@@ -152,10 +165,13 @@ public class GameManager : MonoBehaviour
     {
         panelGameOver.SetActive(true);
     }
+<<<<<<< HEAD
     public void FinalGame()
     {
         panelFinalGame.SetActive(true);
     }
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 
     public void ExitGame()
     {

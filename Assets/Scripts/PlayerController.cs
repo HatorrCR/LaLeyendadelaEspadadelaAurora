@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private bool block;
     private GreyCamera gc;
     private SpriteRenderer sprite;
+<<<<<<< HEAD
     public AudioClip deathSound;
     public AudioClip auchSound;
 
@@ -28,6 +29,12 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed = 5;
     public float runSpeed = 6;
     public float strongjump = 12;
+=======
+
+    [Header("Stadistics")]
+    public float movementSpeed = 7;
+    public float strongjump = 10;
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     public float gravityScale = 3;
     public float slideVel;
     public int lives = 3;
@@ -62,7 +69,10 @@ public class PlayerController : MonoBehaviour
     public bool wallJump;
     public bool Inmortal;
     public bool applystrong;
+<<<<<<< HEAD
     public bool endMap;
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 
     private void Awake() //Obtencion del Rigibody
     {
@@ -74,6 +84,7 @@ public class PlayerController : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
+<<<<<<< HEAD
     public void EndMovement(int direccionX)
     {
         endMap = true;
@@ -91,6 +102,8 @@ public class PlayerController : MonoBehaviour
 
 
 
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     public void SetBlockTrue()
     {
         block = true;
@@ -101,7 +114,10 @@ public class PlayerController : MonoBehaviour
         if (lives > 0)
             return;
         GameManager.instance.GameOver();
+<<<<<<< HEAD
         AudioSource.PlayClipAtPoint(deathSound, transform.position);
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
         this.enabled = false;
     }
 
@@ -119,7 +135,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!Inmortal)
         {
+<<<<<<< HEAD
             AudioSource.PlayClipAtPoint(auchSound, transform.position);
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
             StartCoroutine(Inmortality());
             lives--;
             gc.enabled = true;
@@ -133,6 +152,7 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 1;
             gc.enabled = false;
 
+<<<<<<< HEAD
             ActuLivesUI(1);
             movementSpeed = velAux;
             yield return new WaitForSeconds(1);
@@ -158,6 +178,20 @@ public class PlayerController : MonoBehaviour
                     break;
                 }
             }
+=======
+            for(int i =  GameManager.instance.vidasUI.transform.childCount -1; i >= 0; i--)
+            {
+            {
+                if (GameManager.instance.vidasUI.transform.GetChild(i).gameObject.activeInHierarchy)
+                {
+                    GameManager.instance.vidasUI.transform.GetChild(i).gameObject.SetActive(false);
+                    break;
+                }
+            }
+            movementSpeed = velAux;
+            Death();
+            }
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
         }
     }
 
@@ -203,6 +237,7 @@ public class PlayerController : MonoBehaviour
         {
         Movement();
         Grip();
+<<<<<<< HEAD
         }
         else
         {
@@ -228,6 +263,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+=======
+    }
+
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     private IEnumerator ShakeCamera() //Rutina para el movimiento de camara
     {
         onShake = true;
@@ -573,6 +612,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("ObjetoRecogible"))

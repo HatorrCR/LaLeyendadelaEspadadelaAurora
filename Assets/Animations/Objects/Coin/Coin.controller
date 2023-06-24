@@ -10,8 +10,12 @@ AnimatorState:
   m_Name: Idl
   m_Speed: 1
   m_CycleOffset: 0
+<<<<<<< HEAD
   m_Transitions:
   - {fileID: 158688207745478726}
+=======
+  m_Transitions: []
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -27,6 +31,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< HEAD
 --- !u!1102 &-138927301489894447
 AnimatorState:
   serializedVersion: 6
@@ -53,6 +58,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -61,6 +68,7 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Coin
   serializedVersion: 5
+<<<<<<< HEAD
   m_AnimatorParameters:
   - m_Name: Destroy
     m_Type: 4
@@ -74,6 +82,9 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+=======
+  m_AnimatorParameters: []
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -87,6 +98,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
 --- !u!1101 &158688207745478726
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -112,6 +124,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 --- !u!1107 &5995097782997018631
 AnimatorStateMachine:
   serializedVersion: 6
@@ -123,10 +137,14 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -6579625919613391512}
+<<<<<<< HEAD
     m_Position: {x: 320, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -138927301489894447}
     m_Position: {x: 320, y: -20, z: 0}
+=======
+    m_Position: {x: 310, y: 120, z: 0}
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

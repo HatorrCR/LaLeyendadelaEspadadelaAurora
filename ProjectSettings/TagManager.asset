@@ -12,7 +12,10 @@ TagManager:
   - Coin
   - Heart
   - PowerUp
+<<<<<<< HEAD
   - CheckPoint
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
   layers:
   - Default
   - TransparentFX

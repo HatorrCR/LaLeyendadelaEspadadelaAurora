@@ -5,6 +5,7 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     private bool applypush;
+<<<<<<< HEAD
     private bool detectplayer = false;
 
     public Platform(bool detectplayer)
@@ -12,6 +13,9 @@ public class Platform : MonoBehaviour
         this.detectplayer = detectplayer;
     }
 
+=======
+    private bool detectplayer;
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     private PlayerController player;
 
     public bool platjump;

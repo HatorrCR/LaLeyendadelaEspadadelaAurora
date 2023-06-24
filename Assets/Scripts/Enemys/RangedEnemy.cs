@@ -55,7 +55,11 @@ public class RangedEnemy : MonoBehaviour
             {
                 Vector2 movimiento = new Vector2(direccion.x, 0);
                 movimiento = movimiento.normalized;
+<<<<<<< HEAD
                 rb.velocity = new Vector2(movimiento.x * velmov, rb.velocity.y);
+=======
+                rb.velocity = movimiento * velmov;
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
                 anim.SetBool("Walk", true);
                 ChangeView(movimiento.x);
             }
@@ -91,7 +95,10 @@ public class RangedEnemy : MonoBehaviour
         anim.SetBool("Shooting", true);
         yield return new WaitForSeconds(1.42f);
         anim.SetBool("Shooting", false);
+<<<<<<< HEAD
         directionarrow = (player.transform.position - transform.position).normalized * detectdistance;
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
         directionarrow = directionarrow.normalized;
 
         GameObject arrowGO = Instantiate(arrow, transform.position, Quaternion.identity);
@@ -114,6 +121,7 @@ public class RangedEnemy : MonoBehaviour
         else
         {
             StartCoroutine(ShakeCamera(0.1f));
+<<<<<<< HEAD
           
         }
     }
@@ -122,19 +130,27 @@ public class RangedEnemy : MonoBehaviour
     {
         if(lives <= 0)
         {
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
             velmov = 0;
             rb.velocity = Vector2.zero;
             Destroy(this.gameObject, 0.2f);
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     private IEnumerator ShakeCamera(float time)
     {
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultichannelPerlin = cm.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         cinemachineBasicMultichannelPerlin.m_AmplitudeGain = 5;
         yield return new WaitForSeconds(time);
         cinemachineBasicMultichannelPerlin.m_AmplitudeGain = 0;
+<<<<<<< HEAD
         Death();
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     }
 
     private IEnumerator DamageEffect()

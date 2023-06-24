@@ -15,7 +15,11 @@ GameObject:
   - component: {fileID: 9058129159734004801}
   - component: {fileID: 9058129159734004800}
   m_Layer: 6
+<<<<<<< HEAD
   m_Name: Slime
+=======
+  m_Name: Spider
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,8 +105,13 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: 0.000000020072612, y: 0.16838129}
   m_Size: {x: 1.4300005, y: 1.2320195}
+=======
+  m_Offset: {x: -0.0000000024902747, y: -0.02088994}
+  m_Size: {x: 1.4300004, y: 0.8534627}
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
   m_Direction: 1
 --- !u!50 &9058129159734004802
 Rigidbody2D:
@@ -139,7 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sp: {fileID: 0}
   lives: 3
+<<<<<<< HEAD
   positionhead: {x: 0, y: 0.3}
+=======
+  positionhead: {x: 0, y: 0.4}
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
   velocity: 3
   puntos:
   - {fileID: 9058129159786260573}

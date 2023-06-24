@@ -9,7 +9,10 @@ public class Interactive : MonoBehaviour
     private SpriteRenderer sp;
     private GameObject indInteract;
     private Animator anim;
+<<<<<<< HEAD
     public Animator animator;
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 
     public UnityEvent evento;
 
@@ -19,8 +22,11 @@ public class Interactive : MonoBehaviour
     public bool isChest;
     public bool islever;
     public bool leveractivated;
+<<<<<<< HEAD
     public bool isCheckPoint;
     public bool isSelector;
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 
     private void Awake()
     {
@@ -70,6 +76,7 @@ public class Interactive : MonoBehaviour
             bc.enabled = false;
             this.enabled = false;
         }
+<<<<<<< HEAD
     }
 
     private void CheckPoint()
@@ -87,6 +94,9 @@ public class Interactive : MonoBehaviour
         {
             evento.Invoke();
         }
+=======
+      
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     }
 
     private void Update()
@@ -95,8 +105,11 @@ public class Interactive : MonoBehaviour
         {
             Chest();
             Lever();
+<<<<<<< HEAD
             CheckPoint();
             LevelSelect();
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
         }
     }
 }

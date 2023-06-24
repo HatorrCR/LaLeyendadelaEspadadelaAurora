@@ -12,7 +12,11 @@ public class WayPoints : MonoBehaviour
     private Rigidbody2D rb;
     public SpriteRenderer sp;
     private int indexnow = 0;
+<<<<<<< HEAD
     private bool recoil = false;
+=======
+    private bool recoil;
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
 
     public int lives = 3;
     public Vector2 positionhead;
@@ -42,12 +46,15 @@ public class WayPoints : MonoBehaviour
         {
             TransformEnemy();
         }
+<<<<<<< HEAD
 
         if (recoil)
         {
             rb.AddForce((transform.position - player.transform.position).normalized * 10, ForceMode2D.Impulse);
             recoil = false;
         }
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -130,6 +137,7 @@ public class WayPoints : MonoBehaviour
         else
         {
             StartCoroutine(ShakeCamera(0.1f));
+<<<<<<< HEAD
         }
     }
 
@@ -137,19 +145,27 @@ public class WayPoints : MonoBehaviour
     {
         if(lives <= 0)
         {
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
             velocity = 0;
             rb.velocity = Vector2.zero;
             Destroy(this.gameObject, 0.2f);
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     private IEnumerator ShakeCamera(float time)
     {
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultichannelPerlin = cm.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         cinemachineBasicMultichannelPerlin.m_AmplitudeGain = 5;
         yield return new WaitForSeconds(time);
         cinemachineBasicMultichannelPerlin.m_AmplitudeGain = 0;
+<<<<<<< HEAD
         Death();
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     }
 
     private IEnumerator DamageEffect()

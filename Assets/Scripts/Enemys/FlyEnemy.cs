@@ -107,6 +107,7 @@ public class FlyEnemy : MonoBehaviour
         }
         else
         {
+<<<<<<< HEAD
         }
     }
 
@@ -118,13 +119,21 @@ public class FlyEnemy : MonoBehaviour
         }
     }
 
+=======
+            Destroy(gameObject, 0.2f);
+        }
+    }
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     private IEnumerator ShakeCamera (float time)
     {
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultichannelPerlin = cm.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         cinemachineBasicMultichannelPerlin.m_AmplitudeGain = 5;
         yield return new WaitForSeconds(time);
         cinemachineBasicMultichannelPerlin.m_AmplitudeGain = 0;
+<<<<<<< HEAD
         Death();
+=======
+>>>>>>> 76e78fa39e3393cae13d4d28c0f8f7ab72dc404d
     }
 
     private IEnumerator DamageEffect()
